@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using BudgetWise.Api.Entities;
+using BudgetWise.Api.Extensions;
 using BudgetWise.Api.Models.Requests;
 using BudgetWise.Api.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -43,7 +44,7 @@ namespace BudgetWise.Api.Controllers
         [HttpGet]
         public IActionResult GetCurrentUser()
         {
-            var userId = int.Parse(HttpContext.User.Claims.Single(claim => claim.Type.Equals("budgetwise_user_id")).Value);
+            var userId = HttpContext.GetCurrentUserId();
             var user = _dbContext.Users.Single(u => u.Id == userId);
             return Ok(new
             {

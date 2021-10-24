@@ -3,12 +3,14 @@ using System.Net;
 using BudgetWise.Api.Entities;
 using BudgetWise.Api.Models.Requests;
 using BudgetWise.Api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BudgetWise.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [AllowAnonymous]
     public class AuthenticationController : ControllerBase
     {
         private readonly BudgetWiseDbContext _dbContext;
