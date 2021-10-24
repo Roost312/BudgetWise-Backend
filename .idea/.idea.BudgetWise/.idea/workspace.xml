@@ -8,12 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffba00c0-d945-4878-871d-8022f316e6f9" name="Changes" comment="use dto for create users endpoint">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645/storage_v2/_src_/database/BudgetWise.qYWyTQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645/storage_v2/_src_/database/BudgetWise.qYWyTQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="ffba00c0-d945-4878-871d-8022f316e6f9" name="Changes" comment="create category controller and endpoints with request object">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Entities/LabelsEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Entities/LabelsEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +41,15 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb544b1cb1f04ea3b2f7f4de55167b931bfb80/2BB/QueryableMethodTranslatingExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb544b1cb1f04ea3b2f7f4de55167b931bfb80/6B/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/AuthenticationController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/43f02315c47c4021be0e9ef26643fc6bd2968/DB/SymmetricSignatureProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Entities/UsersEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1a048a7f7534f8d8cb25cac9f1473bb14568/6/JwtSecurityTokenHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/07dfb1ea008b47158970c250ea4475fc1bbb78/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">
@@ -130,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635015321323</updated>
       <workItem from="1635015327000" duration="11961000" />
-      <workItem from="1635101524443" duration="14155000" />
+      <workItem from="1635101524443" duration="15461000" />
     </task>
     <task id="LOCAL-00001" summary="initial project setup">
       <created>1635015383554</created>
@@ -223,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635113207230</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="use extension to get current user id">
+      <created>1635116101006</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1635116101006</updated>
+    </task>
+    <task id="LOCAL-00015" summary="create category controller and endpoints with request object">
+      <created>1635116124951</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1635116124951</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +272,8 @@
     <MESSAGE value="add authentication with salt and jwt tokens" />
     <MESSAGE value="add swagger jwt authentication and don't return password or salt of user" />
     <MESSAGE value="use dto for create users endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="use dto for create users endpoint" />
+    <MESSAGE value="use extension to get current user id" />
+    <MESSAGE value="create category controller and endpoints with request object" />
+    <option name="LAST_COMMIT_MESSAGE" value="create category controller and endpoints with request object" />
   </component>
 </project>
