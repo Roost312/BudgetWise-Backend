@@ -3,15 +3,17 @@ using System;
 using BudgetWise.Api;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BudgetWise.Api.Migrations
 {
     [DbContext(typeof(BudgetWiseDbContext))]
-    partial class BudgetWiseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211024231924_AddNamePropertyToLabels")]
+    partial class AddNamePropertyToLabels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

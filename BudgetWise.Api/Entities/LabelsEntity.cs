@@ -11,6 +11,8 @@ namespace BudgetWise.Api.Entities
         [Key]
         [Column("id")]
         public int Id { get; set; }
+        [Column("name")]
+        public string Name { get; set; }
         [Column("category_id")]
         public int CategoryId { get; set; }
         [Column("planned_amount")]
