@@ -1,12 +1,14 @@
 ﻿using System.Linq;
 using BudgetWise.Api.Entities;
 using BudgetWise.Api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BudgetWise.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class UsersController : ControllerBase
     {
         private readonly BudgetWiseDbContext _dbContext;
@@ -19,6 +21,7 @@ namespace BudgetWise.Api.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult CreateUser(string firstName, string lastName, string username, string password)
         {
             var user = new UsersEntity()
@@ -36,10 +39,18 @@ namespace BudgetWise.Api.Controllers
             return Ok(user.Id);
         }
 
-        [HttpGet("{id:int}")]
-        public IActionResult GetUser(int id)
+        [HttpGet]
+        public IActionResult GetCurrentUser()
         {
-            return Ok(_dbContext.Users.Single(u => u.Id == id));
+            var userId = int.Parse(HttpContext.User.Claims.Single(claim => claim.Type.Equals("budgetwise_user_id")).Value);
+            var user = _dbContext.Users.Single(u => u.Id == userId);
+            return Ok(new
+            {
+                id = user.Id,
+                firstName = user.FirstName,
+                lastName = user.LastName,
+                username = user.Username
+            });
         }
         
     }
