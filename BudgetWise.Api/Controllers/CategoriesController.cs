@@ -5,6 +5,7 @@ using BudgetWise.Api.Extensions;
 using BudgetWise.Api.Models.Requests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BudgetWise.Api.Controllers
 {
@@ -76,6 +77,24 @@ namespace BudgetWise.Api.Controllers
                     id = category.Id,
                     name = category.Name
                 });
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
+        
+        [HttpGet("{categoryId:int}/labels")]
+        public IActionResult GetCategoryLabels(int categoryId)
+        {
+            try
+            {
+                var userId = HttpContext.GetCurrentUserId();
+                var labels = _dbContext.Labels
+                    .Include(le => le.Category)
+                    .Where(le => le.Category.UserId == userId && le.CategoryId == categoryId);
+
+                return Ok(labels);
             }
             catch (Exception e)
             {

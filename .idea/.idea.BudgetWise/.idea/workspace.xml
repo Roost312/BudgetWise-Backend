@@ -8,9 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffba00c0-d945-4878-871d-8022f316e6f9" name="Changes" comment="update database with nullability on entities">
+    <list default="true" id="ffba00c0-d945-4878-871d-8022f316e6f9" name="Changes" comment="fix improper types and add name prop">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Entities/LabelsEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Entities/LabelsEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Controllers/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Controllers/CategoriesController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +47,14 @@
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/AuthenticationController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Migrations/BudgetWiseDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Entities/LabelsEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/43f02315c47c4021be0e9ef26643fc6bd2968/DB/SymmetricSignatureProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Entities/UsersEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1a048a7f7534f8d8cb25cac9f1473bb14568/6/JwtSecurityTokenHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/07dfb1ea008b47158970c250ea4475fc1bbb78/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Migrations/BudgetWiseDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="docker-desktop" />
@@ -132,7 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635015321323</updated>
       <workItem from="1635015327000" duration="11961000" />
-      <workItem from="1635101524443" duration="15641000" />
+      <workItem from="1635101524443" duration="17843000" />
     </task>
     <task id="LOCAL-00001" summary="initial project setup">
       <created>1635015383554</created>
@@ -246,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635117500587</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add name column to labels table">
+      <created>1635117620526</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1635117620526</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix improper types and add name prop">
+      <created>1635117780655</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1635117780655</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +300,8 @@
     <MESSAGE value="use extension to get current user id" />
     <MESSAGE value="create category controller and endpoints with request object" />
     <MESSAGE value="update database with nullability on entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="update database with nullability on entities" />
+    <MESSAGE value="add name column to labels table" />
+    <MESSAGE value="fix improper types and add name prop" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix improper types and add name prop" />
   </component>
 </project>
