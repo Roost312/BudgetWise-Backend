@@ -8,8 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffba00c0-d945-4878-871d-8022f316e6f9" name="Changes" comment="add swagger jwt authentication and don't return password or salt of user">
+    <list default="true" id="ffba00c0-d945-4878-871d-8022f316e6f9" name="Changes" comment="use dto for create users endpoint">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645/storage_v2/_src_/database/BudgetWise.qYWyTQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/dataSources/d7d41072-9333-48bc-8e92-4f84680f9645/storage_v2/_src_/database/BudgetWise.qYWyTQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BudgetWise/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Controllers/AuthenticationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetWise.Api/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWise.Api/Controllers/UsersController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +42,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20da24d0bff84a729a67db2dc17a322566588/46/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb544b1cb1f04ea3b2f7f4de55167b931bfb80/2BB/QueryableMethodTranslatingExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb544b1cb1f04ea3b2f7f4de55167b931bfb80/6B/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/43f02315c47c4021be0e9ef26643fc6bd2968/DB/SymmetricSignatureProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Personal/BudgetWise-Backend/BudgetWise.Api/Startup.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635015321323</updated>
       <workItem from="1635015327000" duration="11961000" />
-      <workItem from="1635101524443" duration="11292000" />
+      <workItem from="1635101524443" duration="14155000" />
     </task>
     <task id="LOCAL-00001" summary="initial project setup">
       <created>1635015383554</created>
@@ -211,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635111545417</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="use dto for create users endpoint">
+      <created>1635113207230</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1635113207230</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +257,7 @@
     <MESSAGE value="commit idea files for intellij" />
     <MESSAGE value="add authentication with salt and jwt tokens" />
     <MESSAGE value="add swagger jwt authentication and don't return password or salt of user" />
-    <option name="LAST_COMMIT_MESSAGE" value="add swagger jwt authentication and don't return password or salt of user" />
+    <MESSAGE value="use dto for create users endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="use dto for create users endpoint" />
   </component>
 </project>
