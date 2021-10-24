@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using BudgetWise.Api.Entities;
+using BudgetWise.Api.Models.Requests;
 using BudgetWise.Api.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -22,14 +23,14 @@ namespace BudgetWise.Api.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult CreateUser(string firstName, string lastName, string username, string password)
+        public IActionResult CreateUser([FromBody] UserCreateRequest request)
         {
             var user = new UsersEntity()
             {
-                FirstName = firstName,
-                LastName = lastName,
-                Username = username,
-                Password = password,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Username = request.Username,
+                Password = request.Password,
                 Salt = _authService.GenerateSalt()
             };
             _dbContext.Users.Add(user);
