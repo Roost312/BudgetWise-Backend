@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using BudgetWise.Api.Entities;
+using BudgetWise.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BudgetWise.Api.Controllers
@@ -9,10 +10,12 @@ namespace BudgetWise.Api.Controllers
     public class UsersController : ControllerBase
     {
         private readonly BudgetWiseDbContext _dbContext;
+        private readonly AuthenticationService _authService;
 
-        public UsersController(BudgetWiseDbContext dbContext)
+        public UsersController(BudgetWiseDbContext dbContext, AuthenticationService authService)
         {
             _dbContext = dbContext;
+            _authService = authService;
         }
 
         [HttpPost]
@@ -24,7 +27,7 @@ namespace BudgetWise.Api.Controllers
                 LastName = lastName,
                 Username = username,
                 Password = password,
-                Salt = "S123om12312e123123salt12312edt1231hing23123y"
+                Salt = _authService.GenerateSalt()
             };
             _dbContext.Users.Add(user);
 
