@@ -37,6 +37,13 @@ namespace BudgetWise.Api
                 options.UseNpgsql(constring);
             });
 
+            services.AddCors(options => options.AddDefaultPolicy((p) =>
+            {
+                p.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
+            }));
+
             services.AddScoped<AuthenticationService>();
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -106,6 +113,8 @@ namespace BudgetWise.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseCors();
 
             app.UseAuthentication();
             app.UseAuthorization();
