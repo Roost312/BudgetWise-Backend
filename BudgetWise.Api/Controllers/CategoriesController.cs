@@ -94,7 +94,16 @@ namespace BudgetWise.Api.Controllers
                     .Include(le => le.Category)
                     .Where(le => le.Category.UserId == userId && le.CategoryId == categoryId);
 
-                return Ok(labels);
+                return Ok(labels.Select(l => new
+                {
+                    l.Id,
+                    l.CategoryId,
+                    l.Name,
+                    l.DueDate,
+                    l.Notes,
+                    l.AppliedAmount,
+                    l.PlannedAmount
+                }));
             }
             catch (Exception e)
             {
