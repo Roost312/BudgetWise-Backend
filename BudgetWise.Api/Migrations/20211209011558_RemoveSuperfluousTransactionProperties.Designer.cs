@@ -3,6 +3,7 @@ using System;
 using BudgetWise.Api;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BudgetWise.Api.Migrations
 {
     [DbContext(typeof(BudgetWiseDbContext))]
-    partial class BudgetWiseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211209011558_RemoveSuperfluousTransactionProperties")]
+    partial class RemoveSuperfluousTransactionProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,7 +107,7 @@ namespace BudgetWise.Api.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("date_applied");
 
-                    b.Property<int?>("LabelId")
+                    b.Property<int>("LabelId")
                         .HasColumnType("integer")
                         .HasColumnName("label_id");
 
@@ -187,7 +189,9 @@ namespace BudgetWise.Api.Migrations
                 {
                     b.HasOne("BudgetWise.Api.Entities.LabelsEntity", "Label")
                         .WithMany("LabelTransactions")
-                        .HasForeignKey("LabelId");
+                        .HasForeignKey("LabelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("BudgetWise.Api.Entities.UsersEntity", "User")
                         .WithMany("UserTransactions")
