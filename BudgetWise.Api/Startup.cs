@@ -57,14 +57,14 @@ namespace BudgetWise.Api
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         RequireExpirationTime = settings.RequireExpirationTime,
-						
+
                         RequireSignedTokens = true,
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(settings.SigningKey)),
-						
+
                         ValidateIssuer = false,
                         ValidIssuer = "https://localhost:5002",
-						
+
                         ValidateAudience = false,
                         ValidAudience = "https://localhost:5002",
 
@@ -95,8 +95,8 @@ namespace BudgetWise.Api
                 {
                     {securityScheme, Array.Empty<string>()}
                 });
-                
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BudgetWise.Api", Version = "v1" });
+
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "BudgetWise.Api", Version = "v1"});
             });
         }
 
@@ -106,16 +106,18 @@ namespace BudgetWise.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BudgetWise.Api v1"));
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BudgetWise.Api v1"));
+
 
             app.UseHttpsRedirection();
 
             app.UseCors();
-            
+
             app.UseRouting();
-            
+
             app.UseCors();
 
             app.UseAuthentication();
