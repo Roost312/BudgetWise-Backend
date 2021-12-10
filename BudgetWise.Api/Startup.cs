@@ -34,7 +34,7 @@ namespace BudgetWise.Api
             services.AddDbContext<BudgetWiseDbContext>((options) =>
             {
                 var constring = Configuration.GetConnectionString("Default");
-                options.UseNpgsql(constring);
+                options.UseSqlServer(constring);
             });
 
             services.AddCors(options => options.AddDefaultPolicy((p) =>
